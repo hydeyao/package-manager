@@ -5,15 +5,15 @@ import java.io.Serializable;
 public class Admin implements Serializable {
     private Integer UserId;
     private String UserLogin;
-    private String PassWordLogin;
+    private String PwdLogin;
 
     public Admin() {
     }
 
-    public Admin(Integer userId, String userLogin, String passWordLogin) {
+    public Admin(Integer userId, String userLogin, String pwdLogin) {
         UserId = userId;
         UserLogin = userLogin;
-        PassWordLogin = passWordLogin;
+        PwdLogin = pwdLogin;
     }
 
     public Integer getUserId() {
@@ -33,10 +33,19 @@ public class Admin implements Serializable {
     }
 
     public String getPassWordLogin() {
-        return PassWordLogin;
+        return PwdLogin;
     }
 
-    public void setPassWordLogin(String passWordLogin) {
-        PassWordLogin = passWordLogin;
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "UserId=" + UserId +
+                ", UserLogin='" + UserLogin + '\'' +
+                ", PwdLogin='" + PwdLogin + '\'' +
+                '}';
+    }
+
+    public void setPassWordLogin(String pwdLogin) {
+        PwdLogin = pwdLogin;
     }
 }
