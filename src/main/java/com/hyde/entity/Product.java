@@ -3,58 +3,69 @@ package com.hyde.entity;
 import java.io.Serializable;
 
 public class Product implements Serializable {
-    private String ProductName;
-    private String Version;
-    private String ReleaseDate;
-    private String FileLocation;
+
+    private String productId;
+    private String productName;
+    private String version;
+    private String releaseDate;
+    private String fileLocation;
     private String updateInfo;
-    private String SourceCodeDate;
-    private Boolean isTested;
+    private String sourceCodeDate;
+    private Integer isTested;
 
-
-    public Product(String productName, String version, String releaseDate, String fileLocation, String updateInfo, String sourceCodeDate, Boolean isTested) {
-        ProductName = productName;
-        Version = version;
-        ReleaseDate = releaseDate;
-        FileLocation = fileLocation;
-        this.updateInfo = updateInfo;
-        SourceCodeDate = sourceCodeDate;
-        this.isTested = isTested;
-    }
 
     public Product() {
     }
 
+    public Product(String productId, String productName, String version, String releaseDate, String fileLocation, String updateInfo, String sourceCodeDate, Integer isTested) {
+        this.productId = productId;
+        this.productName = productName;
+        this.version = version;
+        this.releaseDate = releaseDate;
+        this.fileLocation = fileLocation;
+        this.updateInfo = updateInfo;
+        this.sourceCodeDate = sourceCodeDate;
+        this.isTested = isTested;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
     public String getProductName() {
-        return ProductName;
+        return productName;
     }
 
     public void setProductName(String productName) {
-        ProductName = productName;
+        this.productName = productName;
     }
 
     public String getVersion() {
-        return Version;
+        return version;
     }
 
     public void setVersion(String version) {
-        Version = version;
+        this.version = version;
     }
 
     public String getReleaseDate() {
-        return ReleaseDate;
+        return releaseDate;
     }
 
     public void setReleaseDate(String releaseDate) {
-        ReleaseDate = releaseDate;
+        this.releaseDate = releaseDate;
     }
 
     public String getFileLocation() {
-        return FileLocation;
+        return fileLocation;
     }
 
     public void setFileLocation(String fileLocation) {
-        FileLocation = fileLocation;
+        this.fileLocation = fileLocation;
     }
 
     public String getUpdateInfo() {
@@ -66,18 +77,18 @@ public class Product implements Serializable {
     }
 
     public String getSourceCodeDate() {
-        return SourceCodeDate;
+        return sourceCodeDate;
     }
 
     public void setSourceCodeDate(String sourceCodeDate) {
-        SourceCodeDate = sourceCodeDate;
+        this.sourceCodeDate = sourceCodeDate;
     }
 
-    public Boolean getTested() {
+    public Integer getTested() {
         return isTested;
     }
 
-    public void setTested(Boolean tested) {
+    public void setTested(Integer tested) {
         isTested = tested;
     }
 }
